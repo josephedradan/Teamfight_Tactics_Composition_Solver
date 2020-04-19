@@ -15,8 +15,11 @@ from Teamfight_Tactics_Composition_Solver.constants import PATH_CHAMPIONS, PATH_
     FILE_SQLITE_DB_CHAMPION_NAME_TEAM_COMPOSITION
 
 if __name__ == '__main__':
+
+    # Creates a team_composition solver object
     team_composition_solver = TeamCompositionSolver(PATH_CHAMPIONS, PATH_TRAITS)
 
+    # Does calculation if necessary
     if not os.path.exists(FILE_SQLITE_DB_CHAMPION_NAME_TEAM_COMPOSITION):
         # Do not run this unless you want to calculate all possible useful team compositions
         team_composition_solver.run_complete_calculation_list_tuple(4)
