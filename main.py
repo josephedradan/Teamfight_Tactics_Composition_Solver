@@ -22,4 +22,3 @@ if __name__ == '__main__':
 
     print("Running GUI")
     team_composition_solver_gui = TeamCompositionSolverGUI(team_composition_solver)
-
