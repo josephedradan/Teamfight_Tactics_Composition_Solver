@@ -3,7 +3,9 @@
 
 Purpose:
     The main file for the application
-
+    Calculates the possible team composition combinations to create the .pickle file and the .db file if not created.
+    else
+    Runs the GUI if the .db and .pickle file are created.
 """
 import os
 
