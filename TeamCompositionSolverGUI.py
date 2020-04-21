@@ -783,11 +783,11 @@ class TeamCompositionSolverGUI:
         # print(input_item)
 
         # Get the name of the region that was clicked
-        region_name = self.tree_view.identify("region", event.list_list_states_initial_all, event.y)  # type: str
+        region_name = self.tree_view.identify("region", event.x, event.y)  # type: str
         # print(region_name)
 
         # Get the column number with starting with a #
-        column_number = self.tree_view.identify_column(event.list_list_states_initial_all)  # type: str
+        column_number = self.tree_view.identify_column(event.x)  # type: str
         # print(column_number)
 
         # The input_id
