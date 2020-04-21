@@ -837,11 +837,11 @@ class TeamCompositionSolverGUI:
         # print(input_item)
 
         # Get the name of the region that was clicked
-        region_name = self.tree_view.identify("region", event.list_list_states_initial_all, event.y)  # type: str
+        region_name = self.tree_view.identify("region", event.x, event.y)  # type: str
         # print(region_name)
 
         # Get the column number with starting with a #
-        column_number = self.tree_view.identify_column(event.list_list_states_initial_all)  # type: str
+        column_number = self.tree_view.identify_column(event.x)  # type: str
         # print(column_number)
 
         # The input_id
@@ -861,10 +861,9 @@ class TeamCompositionSolverGUI:
                 column_name = format_db_input(tuple_column_name_and_index_state[0])
 
                 # Increment self.dict_key_column_name_value_index_state's index_state
-                self.dict_key_column_name_formatted_value_index_state[column_name] = (
-                                                                                             self.dict_key_column_name_formatted_value_index_state[
-                                                                                                 column_name] + 1) % len(
-                    self.dict_key_index_state_value_state_text)
+                self.dict_key_column_name_formatted_value_index_state[column_name] = \
+                    (self.dict_key_column_name_formatted_value_index_state[column_name] + 1) % len(
+                        self.dict_key_index_state_value_state_text)
 
                 # Add to threaded queue self.threaded_format_list_tuples_to_be_inserted_v2
                 self.queue_threaded_methods.put(
@@ -895,11 +894,11 @@ class TeamCompositionSolverGUI:
         # print(input_item)
 
         # Get the name of the region that was clicked
-        region_name = self.tree_view.identify("region", event.list_list_states_initial_all, event.y)  # type: str
+        region_name = self.tree_view.identify("region", event.x, event.y)  # type: str
         # print(region_name)
 
         # Get the column number with starting with a #
-        column_number = self.tree_view.identify_column(event.list_list_states_initial_all)  # type: str
+        column_number = self.tree_view.identify_column(event.x)  # type: str
         # print(column_number)
 
         # The input_id
