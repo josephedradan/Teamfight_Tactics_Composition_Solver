@@ -31,7 +31,7 @@ from Teamfight_Tactics_Composition_Solver.Champion import Champion
 from Teamfight_Tactics_Composition_Solver.TeamCompositionSolver import TeamCompositionSolver
 from Teamfight_Tactics_Composition_Solver.constants import DIR_CHAMPION_ICONS, TEAM_COMPOSITION_SIZE_MAX, \
     TRAIT_COUNT_TOTAL_MAX
-from josephs_resources.Database.DataBaseFormatter import format_db_input
+from josephs_resources.Database.functions_data_base_formatter import format_db_input
 from josephs_resources.Decorators.V2.Timer import timer
 
 FONT_BUTTON_TEXT = ('Arial', 6, 'bold')
