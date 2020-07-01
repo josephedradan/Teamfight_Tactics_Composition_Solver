@@ -457,7 +457,7 @@ def _create_db_champion_tables(champion_pool_dict: dict, trait_pool_dict: dict):
     connection.commit()
     connection.close()
 
-
+# Example
 """
 
 SELECT team_composition_combination.team_composition_index, pickled_tuple_team_composition, team_composition_size, trait_count_discrete_total,
