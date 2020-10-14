@@ -56,11 +56,13 @@ from typing import Tuple, List
 from Teamfight_Tactics_Composition_Solver.TeamCompositionContainer import TeamCompositionContainer
 from Teamfight_Tactics_Composition_Solver.TeamCompositionContainerFactory import TeamCompositionContainerFactory
 from Teamfight_Tactics_Composition_Solver.TraitPool import TraitPool
-from Teamfight_Tactics_Composition_Solver.constants import \
-    FILE_SQLITE_DB_CHAMPION_NAME_TEAM_COMPOSITION, TEAM_COMPOSITION_SIZE_MAX, TRAIT_COUNT_TOTAL_MAX, \
-    TEAM_COMPOSITION_SIZE_MIN, TRAIT_COUNT_DISCRETE_TOTAL_MIN
-from josephs_resources.Database.functions_data_base_formatter import format_db_input
-from josephs_resources.Database.SQLite3Wrapper import SQLite3Wrapper
+
+from Teamfight_Tactics_Composition_Solver.constants import (FILE_SQLITE_DB_CHAMPION_NAME_TEAM_COMPOSITION,
+                                                            TEAM_COMPOSITION_SIZE_MAX, TRAIT_COUNT_TOTAL_MAX,
+                                                            TEAM_COMPOSITION_SIZE_MIN, TRAIT_COUNT_DISCRETE_TOTAL_MIN)
+
+from josephs_resources.database.functions_data_base_formatter import format_db_input
+from josephs_resources.database.sqlite3_wrapper import SQLite3Wrapper
 
 STRING_CHAMPION_COMPOSITIONS_TABLE_NAME = "team_composition_combination"
 
@@ -456,6 +458,7 @@ def _create_db_champion_tables(champion_pool_dict: dict, trait_pool_dict: dict):
 
     connection.commit()
     connection.close()
+
 
 # Example
 """

@@ -30,12 +30,14 @@ Notes:
 
 
         solution = 3,815,481,072
+        This is the total amount of team compositions there are...
         That is really big
 
     Power set size = 2^n
         where   n = number of members
 
     So (Summation from r = 0 to 51 of (51!)/(r!(51-r)!)) = 2^51 = 2,251,799,813,685,248
+    We don't care about this number...
 
 Optimizations:
     OPTIMIZATION 1:
@@ -62,7 +64,7 @@ Optimizations:
             size:  9143027
             Function get_set_frozenset_compositions_combinations ran in:    5414.366466522217 Sec
 
-            So 90 MINUTES to calculate all useful team composition combinations
+            So 90 MINUTES to calculate all useful team composition combinations of size 8
 
     OPTIMIZATION 3:
         Notice when you have the maximum amount of champions on the field, the last champ added to the composition
@@ -229,7 +231,7 @@ CALCULATING APPROXIMATIONS:
 
         Approximating for team composition team_composition_size = 9
             y = 0.0013e^(1.8958x) where x = 9
-            y = 33416.6 Sec = 9.2823888888888888888888888888889‬ Hours
+            y = 33416.6 Sec = 9.2823888888888888888888888888889 Hours
 
         Actual
             Function get_set_frozenset_compositions_combinations ran in:      30937.304706573486 Sec
@@ -256,13 +258,13 @@ import threading
 from typing import List, Tuple, FrozenSet, Set
 
 from Teamfight_Tactics_Composition_Solver.TeamCompositionContainer import TeamCompositionContainer
-from Teamfight_Tactics_Composition_Solver.TeamCompositionContainerFactory import \
-    TeamCompositionContainerFactory
+from Teamfight_Tactics_Composition_Solver.TeamCompositionContainerFactory import (TeamCompositionContainerFactory)
+
 from Teamfight_Tactics_Composition_Solver.constants import TEAM_COMPOSITION_SIZE_MAX
 
-from josephs_resources.Decorators.V1.CallableCalledCount import callable_called_count
-from josephs_resources.Decorators.V1.MemoryUsage import memory_usage
-from josephs_resources.Decorators.V2.Timer import timer
+from josephs_resources.decorators.v1.callable_called_count import callable_called_count
+from josephs_resources.decorators.v1.memory_usage import memory_usage
+from josephs_resources.decorators.v2.timer import timer
 
 
 class TeamCompositionCombinationsSearcher:
