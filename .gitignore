@@ -1,3 +1,4 @@
 /resources/generated/*
 *.db
 *.pickle
+__pycache__
